@@ -23,11 +23,11 @@ I used data from opendata.charlottesville.org as well as data collected by the V
 
 I began with two dummy models. A model that randomly predicts one of the six elementary schools each time would be accurate 17.3% of the time. A model that always predicts the school that covers the most census blocks would be right 32.1% of the time.
 
-After cleaning my data and running it through a process of principal component analysis (PCA) to address issues of multicollinearity, I tried both a logistic regression and a decision tree. After running a grid search, my decision tree model performed the best, and it ultimately resulted in an accuracy score of 82.7% on testing data.
+After cleaning my data and running it through a process of principal component analysis (PCA) to address issues of multicollinearity, I tried both a logistic regression, a decision tree, and a random forest. After running a grid search to avoid overfitting, my random forest model performed the best, and it ultimately resulted in an accuracy score of 88.8% on testing data. The top ten feature importances for this model were all non-racial features, so it appears that demographics are very predictive of school zone, but race alone may not be. My next model tested this hypothesis.
 
-I then removed all features that were not describing the racial makeup of the block, ran a PCA, and tried the same two models. Again, the decision tree with grid searched hyperparameters was the best model, but even it only predicted correctly 31.6% of the time on testing data.
+I removed all features that were not describing the racial makeup of the block, ran a PCA, and tried the same two models. Again, the decision tree with grid searched hyperparameters was the best model, but even it only predicted correctly 31.6% of the time on testing data.
 
-Socioeconomic factors are often blamed in conversations about educational equity, so I was curious to see what happened if I constructed a similar model but with only the non-racial demographic data. That model actually did slightly better than the overall model, accurately predicting school zone in 83.2% of the testing data. 
+Socioeconomic factors are often blamed in conversations about educational equity, so I was curious to see what happened if I constructed a similar model but with only the non-racial demographic data. That model performed almost as well as overall model, accurately predicting school zone in 85.7% of the testing data.
 
 It appears that you cannot say much about school zone based solely on race, but other demographic factors can be quite predictive.
 
