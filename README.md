@@ -18,7 +18,7 @@ This project seeks to determine how equitable the new zoning map is. Now that an
 
 I used data from opendata.charlottesville.org as well as data collected by the Virginia Equity Center. Both data sets pull from the United States Census, but I found them easier to use than the direct Census Bureau portal. The Census breaks its data down on a variety of scales, with the smallest being Block. I overlaid the Charlottesville City Schools elementary school zone map with the Census blocks to build my data set. My racial data was at the Block level and my other demographic details were at the Block Group (one level up) level. My non-racial demographic data was largely focused on economic status, including features like median household income, percentage of population with health insurance, households receiving public health insurance and/or SNAP benefits, home-ownership rates, and the number of cost-burdened renters. Additionally I included the age breakdown of each Block Group along with details about number of housing units and how many of those units are vacant. 
 
-![school_zone_map](data/school_zones.html)
+![school zones](images/school_zones)
 
 ## Modeling and Evaluation
 
@@ -26,13 +26,13 @@ I began with two dummy models. A model that randomly predicts one of the six ele
 
 After cleaning my data and running it through a process of principal component analysis (PCA) to address issues of multicollinearity, I tried both a logistic regression, a decision tree, and a random forest. After running a grid search to avoid overfitting, my random forest model performed the best, and it ultimately resulted in an accuracy score of 88.8% on testing data. The top ten feature importances for this model were all non-racial features, so it appears that demographics are very predictive of school zone, but race alone may not be. My next model tested this hypothesis.
 
-I removed all features that were not describing the racial makeup of the block, ran a PCA, and tried the same two models. Again, the random forest with grid searched hyperparameters was the best model, but even it only predicted correctly 31.6% of the time on testing data.
+I removed all features that were not describing the racial makeup of the block and tried the same models. Again, the random forest with grid searched hyperparameters was the best model, but even it only predicted correctly 31.6% of the time on testing data.
 
 Socioeconomic factors are often blamed in conversations about educational equity, so I was curious to see what happened if I constructed a similar model but with only the non-racial demographic data. That model performed almost as well as overall model, accurately predicting school zone in 85.7% of the testing data.
 
 It appears that you cannot say much about school zone based solely on race, but other demographic factors can be quite predictive.
 
-![school_zone_map](data/school_zone_predictions.html)
+![school_zone_predictions](data/school_zone_predictions)
 
 ## Conclusion
 This model does not serve an immediately practical purpose, and it was never intended to. If someone wants to know their school district, the city schools division offers an address lookup tool that is always right.
