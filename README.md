@@ -18,7 +18,7 @@ This project seeks to determine how equitable the new zoning map is. Now that an
 
 I used data from opendata.charlottesville.org as well as data collected by the Virginia Equity Center. Both data sets pull from the United States Census, but I found them easier to use than the direct Census Bureau portal. The Census breaks its data down on a variety of scales, with the smallest being Block. I overlaid the Charlottesville City Schools elementary school zone map with the Census blocks to build my data set. My racial data was at the Block level and my other demographic details were at the Block Group (one level up) level. My non-racial demographic data was largely focused on economic status, including features like median household income, percentage of population with health insurance, households receiving public health insurance and/or SNAP benefits, home-ownership rates, and the number of cost-burdened renters. Additionally I included the age breakdown of each Block Group along with details about number of housing units and how many of those units are vacant. 
 
-![school zones](images/school_zones)
+![school zones](images/school_zones.png)
 
 ## Modeling and Evaluation
 
@@ -32,7 +32,7 @@ Socioeconomic factors are often blamed in conversations about educational equity
 
 It appears that you cannot say much about school zone based solely on race, but other demographic factors can be quite predictive.
 
-![school_zone_predictions](data/school_zone_predictions)
+![school_zone_predictions](images/school_zone_predictions.png)
 
 ## Conclusion
 This model does not serve an immediately practical purpose, and it was never intended to. If someone wants to know their school district, the city schools division offers an address lookup tool that is always right.
@@ -48,5 +48,5 @@ The takeaway from this project is that the school map is no longer the place to 
 ├── .gitignore
 ├── LICENSE
 ├── README.md
-├── [notebook](notebook.ipynb)
+├── [predicting_cville_school_zones](predicting_cville_school_zones.ipynb)
 └── [presentation](presentation.pdf)
