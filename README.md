@@ -1,7 +1,7 @@
 # Did We Really Desegregate?: Predicting School Zones with Demographic Data
 ## A model to determine how predictive demographic features are of elementary school zones
 
-Charlottesville, Virginia, like every other town in the United States, has a checkered history with race relations and public education. The city school district has sought to remedy historic wrongs by updating its school zones and eliminating maps that were drawn to keep black kids out of historically white schools. This project looks at the current map and investigates the degree to which race still informs assigned school zone. Using census data about race, economic status, education levels, age spread, and details about housing, I was able to build a model that could predict a block's assigned school district with 88.8% accuracy. My model that relied only on racial makeup predicted the correct school only 31.6% of the time, hardly better than a dummy model.
+Charlottesville, Virginia, like every other town in the United States, has a checkered history with race relations and public education. The city school district has sought to remedy historic wrongs by updating its school zones and eliminating maps that were drawn to keep black kids out of historically white schools. This project looks at the current map and investigates the degree to which race still informs assigned school zone. Using census data about race, economic status, education levels, age spread, and details about housing, I was able to build a model that could predict a census block's assigned school district with 88.8% accuracy. My model that relied only on racial makeup predicted the correct school only 33.7% of the time, hardly better than a dummy model.
  
 ![swings](images/aaron-burden-ob6O_xd67O0-unsplash.jpg)
 Photo by <a href="https://unsplash.com/@aaronburden?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aaron Burden</a> on <a href="https://unsplash.com/photos/ob6O_xd67O0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -26,9 +26,9 @@ I began with two dummy models. A model that randomly predicts one of the six ele
 
 After cleaning my data and running it through a process of principal component analysis (PCA) to address issues of multicollinearity, I tried both a logistic regression, a decision tree, and a random forest. After running a grid search to avoid overfitting, my random forest model performed the best, and it ultimately resulted in an accuracy score of 88.8% on testing data. The top ten feature importances for this model were all non-racial features, so it appears that demographics are very predictive of school zone, but race alone may not be. My next model tested this hypothesis.
 
-I removed all features that were not describing the racial makeup of the block and tried the same models. Again, the random forest with grid searched hyperparameters was the best model, but even it only predicted correctly 31.6% of the time on testing data.
+I removed all features that were not describing the racial makeup of the block and tried the same models. Again, the random forest with grid searched hyperparameters was the best model, but even it only predicted correctly 33.7% of the time on testing data.
 
-Socioeconomic factors are often blamed in conversations about educational equity, so I was curious to see what happened if I constructed a similar model but with only the non-racial demographic data. That model performed almost as well as overall model, accurately predicting school zone in 85.7% of the testing data.
+Socioeconomic factors are often blamed in conversations about educational equity, so I was curious to see what happened if I constructed a similar model but with only the non-racial demographic data. That model performed even better than the overall model, accurately predicting school zone in 89.3% of the testing data.
 
 It appears that you cannot say much about school zone based solely on race, but other demographic factors can be quite predictive.
 
