@@ -56,13 +56,13 @@ There are many private schools in Charlottesville, so it could be illuminating t
 ## Repository Navigation
 ~~~
 ├──data
-    ├──regional_atlas_block_groups.csv
     ├──cville_census_blocks.geojson
     ├──cville_school_zones.geojson
+    ├──regional_atlas_block_groups.csv
 ├──images
-    ├──swings.jpg
-    ├──school_zones
     ├──school_zone_predictions
+    ├──school_zones
+    ├──swings.jpg
 ├──.gitignore
 ├──LICENSE
 ├──README.md
