@@ -4,7 +4,7 @@
 Charlottesville, Virginia, like every other town in the United States, has a checkered history with race relations and public education. The city school district has sought to remedy historic wrongs by updating its school zones and eliminating maps that were drawn to keep black kids out of historically white schools. This project looks at the current map and investigates the degree to which race still informs assigned school zone. Using census data about race, economic status, education levels, age spread, and details about housing, I was able to build a model that could predict a census block's assigned school district with 88.3% accuracy. My model that relied only on racial makeup predicted the correct school only 35.7% of the time, hardly better than a dummy model.
  
 ![swings](images/swings.jpg)
-Photo by <a href="https://unsplash.com/@aaronburden?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aaron Burden</a> on <a href="https://unsplash.com/photos/ob6O_xd67O0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+###### Photo by <a href="https://unsplash.com/@aaronburden?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aaron Burden</a> on <a href="https://unsplash.com/photos/ob6O_xd67O0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
  
 <a href="https://github.com/LydiaCuffman/cville_school_zones">GitHub Repository</a>
 
@@ -54,17 +54,18 @@ This project points to other potential directions for investigation. Exploration
 There are many private schools in Charlottesville, so it could be illuminating to investigate whether there is any geographic underpinning to which families opt out of public education. One would assume that economic factors correlate strongly with private education, but do geographic features correlate too? Answering such questions would require data I don't have, but that might be available to the school division. If there is a particular zone where more families are choosing to forgo their neighborhood school, that would be worth knowing. None of these models account for whether students in a block are actually attending their assigned public school, so the actual racial makeup of a student body might be easier to predict than my race-only model suggests. Obviously, getting the zoning map right is only one small step on the long road towards making the Charlottesville schools better integrated and a better experience for the full community.
 
 ## Repository Navigation
-
-├──![data](data)
-    ├──![regional_atlas_block_groups.csv](regional_atlas_block_groups.csv)
-    ├──![cville_census_blocks.geojson](cville_census_blocks.geojson)
-    ├──![cville_school_zones.geojson](cville_school_zones.geojson)
-├──![images](images)
-    ├──![swings.jpg](swings.jpg)
-    ├──![school_zones](school_zones)
-    ├──![school_zone_predictions](school_zone_predictions)
-├──![.gitignore](.gitignore)
-├──![LICENSE](LICENSE)
-├──![README.md](README.md)
-├──![predicting_cville_school_zones](predicting_cville_school_zones.ipynb)
-└──![presentation](presentation.pdf)
+~~~
+├──data
+    ├──regional_atlas_block_groups.csv
+    ├──cville_census_blocks.geojson
+    ├──cville_school_zones.geojson
+├──images
+    ├──swings.jpg
+    ├──school_zones
+    ├──school_zone_predictions
+├──.gitignore
+├──LICENSE
+├──README.md
+├──predicting_cville_school_zones
+└──presentation
+~~~
