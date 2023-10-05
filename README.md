@@ -67,5 +67,6 @@ There are many private schools in Charlottesville, so it could be illuminating t
 ├──LICENSE
 ├──README.md
 ├──predicting_cville_school_zones.ipynb
-└──presentation.pdf
+├──presentation.pdf
+└──requirements.txt
 ~~~
