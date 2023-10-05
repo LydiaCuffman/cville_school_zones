@@ -11,11 +11,13 @@ Charlottesville, Virginia, like every other town in the United States, has a che
 <a href="https://github.com/LydiaCuffman/cville_school_zones/blob/main/presentation.pdf">Presentation</a>
 
 
-## Business Understanding and Data Understanding
+## Business Understanding
 
 Charlottesville City Schools integrated under duress. Initially the superintendent closed the schools rather than integrate them. While the schools did eventually reopen and ostensibly integrate, what followed were decades of less overt segregation. <a href="https://www.nytimes.com/2018/10/16/us/charlottesville-riots-black-students-schools.html">The New York Times</a> reported on this history of discrimination against black students in a 2018 article. One illustrative example is Venable Elementary School, the school closest to the University of Virginia and the school cited in the article as having the highest test scores in the division. Students in a predominantly black neighborhood a half mile from the school were zoned for a school three miles away. That racist choice was only fully rectified in 2022, when the school board voted to adjust the school zoning map. The school division also issued an apology to community members for <a href="https://www.cvilletomorrow.org/after-half-a-century-bussing-kids-from-a-historically-black-public-housing-community-away-from-their-neighborhood-school-city-schools-votes-to-rezone-venable/">"historic and recent mistreatment."</a>
 
 This project seeks to determine how equitable the new zoning map is. Now that an obviously racially motivated choice has been fixed, to what degree does the racial makeup of a neighborhood predict the elementary school its students are assigned to?
+
+## Data Understanding
 
 I used data from opendata.charlottesville.org as well as data collected by the Virginia Equity Center. Both data sets pull from the United States Census, but I found them easier to use than the direct Census Bureau portal. The Census breaks its data down on a variety of scales, with the smallest being block. I overlaid the Charlottesville City Schools elementary school zone map with the census blocks to build my data set. My racial data was at the block level and my other demographic details were at the block group level. My data about race showed the percentages of each racial group living in a Census block. My non-racial demographic data was largely focused on economic status, including features like median household income, percentage of population with health insurance, households receiving public health insurance and/or SNAP benefits, home-ownership rates, and the number of cost-burdened renters. Additionally I included the age breakdown of each block group along with details about number of housing units and how many of those units are vacant. 
 
